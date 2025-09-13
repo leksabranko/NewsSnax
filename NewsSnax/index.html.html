@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Snackable viral news you can’t ignore — NewsSnax." />
+  <title>NewsSnax</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 bg-red-600 text-white shadow z-50">
+    <div class="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold">NewsSnax</h1>
+      <button id="menu-btn" class="md:hidden">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu (optional) -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+    <ul class="px-4 py-2 space-y-2">
+      <li><a href="#" class="block text-red-600 font-semibold">Trending</a></li>
+      <li><a href="#" class="block text-gray-700">Politics</a></li>
+      <li><a href="#" class="block text-gray-700">Tech</a></li>
+      <li><a href="#" class="block text-gray-700">Shocking</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Feed -->
+  <main class="max-w-screen-md mx-auto px-4 py-6">
+    <section class="space-y-6">
+      <!-- Article Card -->
+      <article class="border rounded-xl overflow-hidden shadow hover:shadow-md transition">
+        <img src="https://source.unsplash.com/800x400/?breaking-news" alt="Thumbnail" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-red-600">You Won't Believe What Happened in Parliament Today</h2>
+          <p class="text-sm text-gray-700 mt-2">A shocking turn of events during a live broadcast…</p>
+        </div>
+      </article>
+
+      <!-- Repeatable Card -->
+      <article class="border rounded-xl overflow-hidden shadow hover:shadow-md transition">
+        <img src="https://source.unsplash.com/800x400/?news,viral" alt="Thumbnail" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-red-600">This Tech Invention Could Change Your Life in 5 Minutes</h2>
+          <p class="text-sm text-gray-700 mt-2">Experts are stunned by this breakthrough — here's why…</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-4">
+    © 2025 NewsSnax. All rights reserved.
+  </footer>
+
+  <!-- Script for Mobile Menu Toggle -->
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
